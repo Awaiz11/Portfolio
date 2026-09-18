@@ -10,16 +10,16 @@ const details = [
 export default function About() {
   return (
     <section id="about" className="scroll-mt-24 py-16 md:py-24">
-      <div className="mx-auto max-w-7xl px-6 lg:px-10">
-        <div className="grid gap-14 lg:grid-cols-12 lg:gap-16">
-          {/* Portrait — sticky on desktop */}
-          <div className="lg:col-span-5">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
+        <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
+          {/* Portrait — shown below copy on mobile, sticky on desktop */}
+          <div className="order-2 lg:order-1 lg:col-span-5">
             <div className="lg:sticky lg:top-28">
               <Reveal>
                 <SectionLabel index="01" title="About" />
               </Reveal>
               <Reveal delay={120}>
-                <div className="relative overflow-hidden rounded-[2rem] border border-neutral-200/50 bg-gradient-to-b from-[#e5d0b3] to-[#c6a682] aspect-[4/5] shadow-inner">
+                <div className="relative mt-6 overflow-hidden rounded-[1.5rem] border border-neutral-200/50 bg-gradient-to-b from-[#e5d0b3] to-[#c6a682] aspect-[4/5] shadow-inner md:rounded-[2rem]">
                   <img
                     src="/images/profile-cutout.png"
                     alt="Aawaiz Ijaz"
@@ -35,9 +35,9 @@ export default function About() {
           </div>
 
           {/* Copy */}
-          <div className="lg:col-span-7">
+          <div className="order-1 lg:order-2 lg:col-span-7">
             <Reveal>
-              <p className="text-2xl font-medium leading-[1.35] tracking-[-0.01em] text-ink md:text-[2.1rem]">
+              <p className="text-xl font-medium leading-[1.4] tracking-[-0.01em] text-ink sm:text-2xl md:text-[2.1rem] md:leading-[1.35]">
                 I&apos;m a designer-developer hybrid who believes the best
                 products are born where{" "}
                 <em className="font-serif font-medium italic text-terracotta">

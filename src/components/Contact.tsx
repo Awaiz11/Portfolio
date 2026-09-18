@@ -29,10 +29,10 @@ const channels = [
 
 export default function Contact() {
   return (
-    <section id="contact" className="scroll-mt-24 px-6 pb-16 md:pb-24 lg:px-10">
+    <section id="contact" className="scroll-mt-24 px-4 pb-16 sm:px-6 md:pb-24 lg:px-10">
       <div className="mx-auto max-w-7xl">
         <Reveal>
-          <div className="relative overflow-hidden rounded-[2.5rem] bg-ink px-7 py-16 text-cream md:px-14 md:py-24">
+          <div className="relative overflow-hidden rounded-[1.75rem] bg-ink px-5 py-12 text-cream sm:px-8 sm:py-16 md:rounded-[2.5rem] md:px-14 md:py-24">
             {/* Quiet decorative asterisk */}
             <Asterisk
               aria-hidden="true"
@@ -43,7 +43,7 @@ export default function Contact() {
             <div className="relative">
               <SectionLabel index="04" title="Contact" dark />
 
-              <h2 className="mt-8 max-w-3xl text-4xl font-bold leading-[1.08] tracking-[-0.02em] md:text-6xl">
+              <h2 className="mt-6 max-w-3xl text-3xl font-bold leading-[1.1] tracking-[-0.02em] sm:text-4xl md:mt-8 md:text-6xl md:leading-[1.08]">
                 Have an idea? Let&apos;s make it{" "}
                 <em className="font-serif font-medium italic text-terracotta-light">
                   quietly
@@ -51,25 +51,25 @@ export default function Contact() {
                 brilliant.
               </h2>
 
-              <p className="mt-7 max-w-xl text-base leading-relaxed text-cream/70 md:text-lg">
+              <p className="mt-5 max-w-xl text-sm leading-relaxed text-cream/70 sm:text-base md:mt-7 md:text-lg">
                 Whether it&apos;s a full product, a redesign, or just a
                 hunch you&apos;d like to explore — my inbox is always open,
                 and my WhatsApp is even faster.
               </p>
 
-              <div className="mt-10 flex flex-wrap items-center gap-4">
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4 md:mt-10">
                 <a
                   href={WHATSAPP_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group inline-flex items-center gap-2.5 rounded-full bg-wa px-7 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:bg-wa-deep hover:shadow-[0_12px_32px_-12px_rgba(37,211,102,0.55)]"
+                  className="group inline-flex w-full items-center justify-center gap-2.5 rounded-full bg-wa px-7 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:bg-wa-deep hover:shadow-[0_12px_32px_-12px_rgba(37,211,102,0.55)] sm:w-auto"
                 >
                   <WhatsAppIcon className="h-4.5 w-4.5 transition-transform duration-300 group-hover:scale-110" />
                   Chat on WhatsApp
                 </a>
                 <a
                   href="mailto:awaiztabassam3@gmail.com"
-                  className="group inline-flex items-center gap-2.5 rounded-full border border-cream/25 px-7 py-3.5 text-sm font-semibold text-cream transition-all duration-300 hover:border-cream hover:bg-cream hover:text-ink"
+                  className="group inline-flex w-full items-center justify-center gap-2.5 rounded-full border border-cream/25 px-7 py-3.5 text-sm font-semibold text-cream transition-all duration-300 hover:border-cream hover:bg-cream hover:text-ink sm:w-auto"
                 >
                   <Mail className="h-4.5 w-4.5" />
                   Send an email
@@ -77,7 +77,7 @@ export default function Contact() {
               </div>
 
               {/* Channels */}
-              <div className="mt-14 grid gap-px overflow-hidden rounded-2xl border border-cream/10 bg-cream/10 sm:grid-cols-3">
+              <div className="mt-10 grid gap-px overflow-hidden rounded-xl border border-cream/10 bg-cream/10 sm:mt-14 sm:grid-cols-3 sm:rounded-2xl">
                 <a
                   href={WHATSAPP_URL}
                   target="_blank"

@@ -14,13 +14,13 @@ const stats = [
 export default function Hero() {
   return (
     <section id="top" className="relative overflow-hidden pt-20 md:pt-28">
-      <div className="mx-auto max-w-7xl px-6 lg:px-10">
-        <div className="grid items-center gap-14 lg:grid-cols-12 lg:gap-10">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
+        <div className="grid items-center gap-10 md:gap-14 lg:grid-cols-12 lg:gap-10">
           {/* Copy */}
           <div className="lg:col-span-7">
 
             <Reveal delay={100}>
-              <h1 className="mt-7 text-[clamp(2.6rem,6vw,4.9rem)] font-bold leading-[1.04] tracking-[-0.03em] text-ink">
+              <h1 className="mt-5 text-[clamp(2rem,7vw,4.9rem)] font-bold leading-[1.08] tracking-[-0.03em] text-ink md:mt-7 md:leading-[1.04]">
                 I design &amp; build digital products that feel{" "}
                 <em className="font-serif font-medium italic tracking-[-0.01em] text-terracotta">
                   effortlessly
@@ -30,7 +30,7 @@ export default function Hero() {
             </Reveal>
 
             <Reveal delay={200}>
-              <p className="mt-7 max-w-xl text-base leading-relaxed text-ink-soft md:text-lg">
+              <p className="mt-5 max-w-xl text-sm leading-relaxed text-ink-soft sm:text-base md:mt-7 md:text-lg">
                 Hi, I&apos;m{" "}
                 <span className="font-semibold text-ink">Aawaiz Ijaz</span> — a
                 UI/UX designer &amp; frontend developer. I partner with founders
@@ -40,10 +40,10 @@ export default function Hero() {
             </Reveal>
 
             <Reveal delay={300}>
-              <div className="mt-10 flex flex-wrap items-center gap-4">
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4 md:mt-10">
                 <a
                   href="#work"
-                  className="group inline-flex items-center gap-2.5 rounded-full bg-ink px-7 py-3.5 text-sm font-semibold text-cream transition-all duration-300 hover:bg-terracotta"
+                  className="group inline-flex w-full items-center justify-center gap-2.5 rounded-full bg-ink px-7 py-3.5 text-sm font-semibold text-cream transition-all duration-300 hover:bg-terracotta sm:w-auto sm:justify-start"
                 >
                   View selected work
                   <ArrowDown className="h-4 w-4 transition-transform duration-300 group-hover:translate-y-0.5" />
@@ -52,7 +52,7 @@ export default function Hero() {
                   href={WHATSAPP_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group inline-flex items-center gap-2.5 rounded-full border border-ink/15 bg-cream px-7 py-3.5 text-sm font-semibold text-ink transition-all duration-300 hover:border-wa hover:bg-wa/5"
+                  className="group inline-flex w-full items-center justify-center gap-2.5 rounded-full border border-ink/15 bg-cream px-7 py-3.5 text-sm font-semibold text-ink transition-all duration-300 hover:border-wa hover:bg-wa/5 sm:w-auto sm:justify-start"
                 >
                   <WhatsAppIcon className="h-4.5 w-4.5 text-wa-deep transition-transform duration-300 group-hover:scale-110" />
                   Chat on WhatsApp
@@ -64,7 +64,7 @@ export default function Hero() {
           {/* Visual */}
           <div className="lg:col-span-5">
             <Reveal delay={250} y={36}>
-              <div className="relative mx-auto max-w-md lg:max-w-none">
+              <div className="relative mx-auto max-w-sm sm:max-w-md lg:max-w-none">
                 {/* ── VS Code Dark Window ── */}
                 <div className="overflow-hidden rounded-2xl bg-[#1E1E1E] shadow-[0_32px_80px_-16px_rgba(0,0,0,0.55),0_8px_24px_-8px_rgba(0,0,0,0.35)]">
 
@@ -217,13 +217,15 @@ export default function Hero() {
 
         {/* Stats */}
         <Reveal delay={150}>
-          <dl className="mt-20 grid grid-cols-2 border-t border-line md:mt-28 md:grid-cols-4">
+          <dl className="mt-14 grid grid-cols-1 border-t border-line sm:grid-cols-2 md:mt-28 md:grid-cols-4">
             {stats.map((stat, i) => (
               <div
                 key={stat.label}
-                className={`flex flex-col py-8 md:py-10 ${i > 0 ? "border-l border-line pl-6 md:pl-10" : ""
-                  } ${i === 2 ? "max-md:border-l-0 max-md:pl-0" : ""} ${i > 1 ? "max-md:border-t max-md:border-line" : ""
-                  }`}
+                className={`flex flex-col py-6 md:py-10 ${
+                  i > 0 ? "border-t border-line sm:border-l sm:border-t-0 sm:pl-6 md:pl-10" : ""
+                } ${i === 2 ? "sm:border-l-0 sm:pl-0 md:border-l md:pl-10" : ""} ${
+                  i > 1 ? "md:border-t-0" : ""
+                } ${i >= 2 ? "sm:border-t sm:border-line" : ""}`}
               >
                 <dt className="order-2 mt-2 text-sm text-ink-soft">{stat.label}</dt>
                 <dd className="order-1 text-3xl font-bold tracking-tight text-ink tabular-nums md:text-4xl">

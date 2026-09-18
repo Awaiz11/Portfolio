@@ -87,13 +87,13 @@ const capabilities = [
 export default function Skills() {
   return (
     <section id="expertise" className="scroll-mt-24 py-16 md:py-24">
-      <div className="mx-auto max-w-7xl px-6 lg:px-10">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
         {/* Header */}
-        <div className="grid items-end gap-8 md:grid-cols-12">
+        <div className="grid items-end gap-6 md:gap-8 md:grid-cols-12">
           <div className="md:col-span-7">
             <Reveal>
               <SectionLabel index="02" title="Expertise" />
-              <h2 className="mt-6 text-4xl font-bold tracking-[-0.02em] text-ink md:text-5xl">
+              <h2 className="mt-4 text-3xl font-bold tracking-[-0.02em] text-ink md:mt-6 md:text-5xl">
                 The toolkit behind{" "}
                 <em className="font-serif font-medium italic text-terracotta">
                   the craft
@@ -113,10 +113,10 @@ export default function Skills() {
         </div>
 
         {/* Capabilities */}
-        <div className="mt-14 grid gap-5 md:grid-cols-3">
+        <div className="mt-10 grid gap-4 sm:gap-5 md:grid-cols-3">
           {capabilities.map((cap, i) => (
             <Reveal key={cap.title} delay={i * 100}>
-              <div className="group h-full rounded-[1.75rem] border border-line bg-parchment p-8 transition-all duration-300 hover:-translate-y-1 hover:border-terracotta/40 hover:bg-cream hover:shadow-[0_20px_50px_-30px_rgba(33,30,25,0.3)]">
+              <div className="group h-full rounded-[1.5rem] border border-line bg-parchment p-6 transition-all duration-300 hover:-translate-y-1 hover:border-terracotta/40 hover:bg-cream hover:shadow-[0_20px_50px_-30px_rgba(33,30,25,0.3)] md:rounded-[1.75rem] md:p-8">
                 <span className="flex h-12 w-12 items-center justify-center rounded-full border border-line bg-cream text-ink transition-colors duration-300 group-hover:border-terracotta group-hover:bg-terracotta group-hover:text-cream">
                   <cap.icon className="h-5 w-5" />
                 </span>
@@ -143,7 +143,7 @@ export default function Skills() {
               {tools.map((tool, i) => (
                 <div
                   key={tool.name}
-                  className="group flex items-center gap-4 px-6 py-5 transition-colors duration-300 hover:bg-parchment md:grid md:grid-cols-[auto_auto_1fr_auto_auto] md:gap-8 md:px-10 md:py-6"
+                  className="group flex items-center gap-3 px-4 py-4 transition-colors duration-300 hover:bg-parchment sm:gap-4 sm:px-6 sm:py-5 md:grid md:grid-cols-[auto_auto_1fr_auto_auto] md:gap-8 md:px-10 md:py-6"
                 >
                   <span className="w-8 shrink-0 text-sm font-semibold tabular-nums text-ink-soft/50 transition-colors duration-300 group-hover:text-terracotta">
                     {String(i + 1).padStart(2, "0")}

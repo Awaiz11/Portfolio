@@ -48,13 +48,13 @@ const projects = [
 export default function Projects() {
   return (
     <section id="work" className="scroll-mt-24 py-16 md:py-24">
-      <div className="mx-auto max-w-7xl px-6 lg:px-10">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
         {/* Header */}
-        <div className="grid items-end gap-8 md:grid-cols-12">
+        <div className="grid items-end gap-6 md:gap-8 md:grid-cols-12">
           <div className="md:col-span-7">
             <Reveal>
               <SectionLabel index="03" title="Selected Work" />
-              <h2 className="mt-6 text-4xl font-bold tracking-[-0.02em] text-ink md:text-5xl">
+              <h2 className="mt-4 text-3xl font-bold tracking-[-0.02em] text-ink md:mt-6 md:text-5xl">
                 Work that pairs purpose with{" "}
                 <em className="font-serif font-medium italic text-terracotta">
                   polish
@@ -74,13 +74,13 @@ export default function Projects() {
         </div>
 
         {/* Grid */}
-        <div className="mt-14 grid gap-x-8 gap-y-16 md:grid-cols-2">
+        <div className="mt-10 grid gap-x-8 gap-y-12 sm:grid-cols-2 md:mt-14 md:gap-y-16">
           {projects.map((project, i) => (
             <Reveal key={project.title} delay={(i % 2) * 120}>
               <article className="group">
                 <a
                   href="#contact"
-                  className="relative block overflow-hidden rounded-[2rem] border border-line bg-parchment"
+                  className="relative block overflow-hidden rounded-[1.5rem] border border-line bg-parchment md:rounded-[2rem]"
                   aria-label={`${project.title} — ${project.subtitle}`}
                 >
                   <img
