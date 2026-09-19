@@ -12,6 +12,7 @@ const projects = [
     description:
       "A calm-first mobile experience helping 40k+ users unwind — guided breathing, sleep stories, and gentle habit tracking wrapped in a muted sage palette.",
     tags: ["Mobile App", "UI/UX", "Design System"],
+    link: "https://serena-nine-sooty.vercel.app/",
   },
   {
     title: "Terra Clay Co.",
