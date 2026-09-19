@@ -15,16 +15,6 @@ const projects = [
     link: "https://serena-nine-sooty.vercel.app/",
   },
   {
-    title: "Terra Clay Co.",
-    subtitle: "E-commerce Experience",
-    year: "2024",
-    image: "/images/project-terra.jpg",
-    alt: "Terra ceramics e-commerce website shown on a laptop",
-    description:
-      "A warm, tactile storefront for a handmade ceramics studio — from art direction to a React build scoring 98 on Lighthouse.",
-    tags: ["E-commerce", "React", "Art Direction"],
-  },
-  {
     title: "Salon Code",
     subtitle: "Web Application",
     year: "2024",
@@ -55,6 +45,7 @@ const projects = [
     description:
       "An editorial website for a neighbourhood florist — soft serif typography meets seamless booking, lifting reservations by 60%.",
     tags: ["Branding", "Web Design", "React"],
+    link: "https://bloom-bark.vercel.app/",
   },
 ];
 
