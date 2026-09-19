@@ -143,7 +143,7 @@ export default function Skills() {
               {tools.map((tool, i) => (
                 <div
                   key={tool.name}
-                  className="group flex items-center gap-3 px-4 py-4 transition-colors duration-300 hover:bg-parchment sm:gap-4 sm:px-6 sm:py-5 md:grid md:grid-cols-[auto_auto_1fr_auto_auto] md:gap-8 md:px-10 md:py-6"
+                  className="group flex flex-col items-start gap-3 px-4 py-4 transition-colors duration-300 hover:bg-parchment sm:flex-row sm:items-center sm:gap-4 sm:px-6 sm:py-5 md:grid md:grid-cols-[auto_auto_1fr_auto_auto] md:gap-8 md:px-10 md:py-6"
                 >
                   <span className="w-8 shrink-0 text-sm font-semibold tabular-nums text-ink-soft/50 transition-colors duration-300 group-hover:text-terracotta">
                     {String(i + 1).padStart(2, "0")}
@@ -155,7 +155,7 @@ export default function Skills() {
                     <h3 className="text-base font-bold text-ink md:text-lg">
                       {tool.name}
                     </h3>
-                    <p className="mt-0.5 truncate text-sm text-ink-soft">
+                    <p className="mt-0.5 text-sm text-ink-soft">
                       {tool.description}
                     </p>
                   </div>

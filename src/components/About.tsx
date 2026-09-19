@@ -11,31 +11,9 @@ export default function About() {
   return (
     <section id="about" className="scroll-mt-24 py-16 md:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
-        <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
-          {/* Portrait — shown below copy on mobile, sticky on desktop */}
-          <div className="order-2 lg:order-1 lg:col-span-5">
-            <div className="lg:sticky lg:top-28">
-              <Reveal>
-                <SectionLabel index="01" title="About" />
-              </Reveal>
-              <Reveal delay={120}>
-                <div className="relative mt-6 overflow-hidden rounded-[1.5rem] border border-neutral-200/50 bg-gradient-to-b from-[#e5d0b3] to-[#c6a682] aspect-[4/5] shadow-inner md:rounded-[2rem]">
-                  <img
-                    src="/images/profile-cutout.png"
-                    alt="Aawaiz Ijaz"
-                    className="w-full h-full object-cover object-top transition-transform duration-700 ease-out hover:scale-[1.03]"
-                  />
-                </div>
-                <p className="mt-4 max-w-md text-xs font-medium tracking-wide text-ink-soft">
-                  Aawaiz Ijaz — designer, developer, and perpetual student of
-                  restraint.
-                </p>
-              </Reveal>
-            </div>
-          </div>
-
+        <div className="flex flex-col-reverse gap-12 lg:grid lg:grid-cols-12 lg:gap-16">
           {/* Copy */}
-          <div className="order-1 lg:order-2 lg:col-span-7">
+          <div className="lg:col-span-7">
             <Reveal>
               <p className="text-xl font-medium leading-[1.4] tracking-[-0.01em] text-ink sm:text-2xl md:text-[2.1rem] md:leading-[1.35]">
                 I&apos;m a designer-developer hybrid who believes the best
@@ -86,6 +64,28 @@ export default function About() {
                 Nice to meet you
               </p>
             </Reveal>
+          </div>
+
+          {/* Portrait — shown above copy on mobile, sticky on desktop */}
+          <div className="lg:col-span-5 lg:order-first">
+            <div className="lg:sticky lg:top-28">
+              <Reveal>
+                <SectionLabel index="01" title="About" />
+              </Reveal>
+              <Reveal delay={120}>
+                <div className="relative mt-6 overflow-hidden rounded-[1.5rem] border border-neutral-200/50 bg-gradient-to-b from-[#e5d0b3] to-[#c6a682] aspect-[4/5] shadow-inner md:rounded-[2rem]">
+                  <img
+                    src="/images/profile-cutout.png"
+                    alt="Aawaiz Ijaz"
+                    className="w-full h-full object-cover object-top transition-transform duration-700 ease-out hover:scale-[1.03]"
+                  />
+                </div>
+                <p className="mt-4 max-w-md text-xs font-medium tracking-wide text-ink-soft">
+                  Aawaiz Ijaz — designer, developer, and perpetual student of
+                  restraint.
+                </p>
+              </Reveal>
+            </div>
           </div>
         </div>
       </div>
