@@ -24,6 +24,17 @@ const projects = [
     tags: ["E-commerce", "React", "Art Direction"],
   },
   {
+    title: "Salon Code",
+    subtitle: "Web Application",
+    year: "2024",
+    image: "/images/project-salon.jpg",
+    alt: "Salon Code placeholder image",
+    description:
+      "A placeholder description for the Salon Code project. Features a modern UI and robust booking system.",
+    tags: ["Web App", "React", "TypeScript"],
+    link: "https://salon-code-xg6g.vercel.app/",
+  },
+  {
     title: "Ledgerly",
     subtitle: "Fintech Dashboard",
     year: "2024",
@@ -79,7 +90,9 @@ export default function Projects() {
             <Reveal key={project.title} delay={(i % 2) * 120}>
               <article className="group">
                 <a
-                  href="#contact"
+                  href={project.link || "#contact"}
+                  target={project.link ? "_blank" : undefined}
+                  rel={project.link ? "noopener noreferrer" : undefined}
                   className="relative block overflow-hidden rounded-[1.5rem] border border-line bg-parchment md:rounded-[2rem]"
                   aria-label={`${project.title} — ${project.subtitle}`}
                 >
