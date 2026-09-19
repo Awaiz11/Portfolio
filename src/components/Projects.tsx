@@ -44,6 +44,7 @@ const projects = [
     description:
       "A personal finance dashboard that turns messy numbers into quiet, glanceable insight — designed and built end-to-end with TypeScript.",
     tags: ["SaaS", "Dashboard", "TypeScript"],
+    link: "https://leg-flax.vercel.app/",
   },
   {
     title: "Bloom & Bark",
