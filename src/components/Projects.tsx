@@ -4,31 +4,97 @@ import SectionLabel from "./SectionLabel";
 
 const projects = [
   {
-    title: "Serene",
-    subtitle: "Meditation & Sleep App",
-    year: "2025",
-    image: "/images/project-serene.jpg",
-    alt: "Serene meditation app interface on two floating phones",
+    title: "NexaFlow",
+    subtitle: "Web Design Studio Website",
+    year: "2026",
+    image: "/images/project-nexaflow.jpg",
+    alt: "NexaFlow website hero with stacked previews of client websites",
     description:
-      "A calm-first mobile experience helping 40k+ users unwind — guided breathing, sleep stories, and gentle habit tracking wrapped in a muted sage palette.",
-    tags: ["Mobile App", "UI/UX", "Design System"],
-    link: "https://serena-nine-sooty.vercel.app/",
+      "My own web design service for local businesses — restaurants, salons, studios and shops. Built with Next.js, Tailwind and Framer Motion, with light and dark themes and a free-preview offer.",
+    tags: ["Next.js", "Tailwind CSS", "Framer Motion"],
+    link: "https://nexaflow-brown.vercel.app/",
   },
   {
-    title: "Salon Code",
-    subtitle: "Web Application",
-    year: "2024",
-    image: "/images/project-salon.jpg",
-    alt: "Salon Code placeholder image",
+    title: "Corehaus",
+    subtitle: "Fitness Studio Landing Page",
+    year: "2026",
+    image: "/images/project-corehaus.jpg",
+    alt: "Corehaus fitness studio landing page with bold headline",
     description:
-      "A placeholder description for the Salon Code project. Features a modern UI and robust booking system.",
+      "A bold, conversion-focused landing page for a high-intensity Pilates studio — big editorial type, moody photography and clear booking calls to action.",
+    tags: ["Landing Page", "React", "Vite"],
+    link: "https://premium-corehaus-landing-page.vercel.app/",
+  },
+  {
+    title: "Gin Palau",
+    subtitle: "Luxury Gin Bar, Barcelona",
+    year: "2026",
+    image: "/images/project-ginpalau.jpg",
+    alt: "Gin Palau website with a smoky gin tonic and serif headline",
+    description:
+      "A premium landing page for a gin specialist bar — elegant serif typography, a dark palette and smooth intro animation that set a luxury mood.",
+    tags: ["Landing Page", "UI Design", "Animation"],
+    link: "https://luxury-gin-palau-landing-page.vercel.app/",
+  },
+  {
+    title: "Chicago's Pizza Factory",
+    subtitle: "Restaurant Website",
+    year: "2026",
+    image: "/images/project-chicago.jpg",
+    alt: "Chicago's Pizza Factory website with deep-dish pizza hero",
+    description:
+      "A restaurant website for a deep-dish pizza brand with menu, table reservations and online ordering, designed to turn visitors into orders.",
+    tags: ["Restaurant", "Web Design", "React"],
+    link: "https://chicago-s.vercel.app/",
+  },
+  {
+    title: "Vitae Fisioteràpia",
+    subtitle: "Physiotherapy Clinic",
+    year: "2026",
+    image: "/images/project-vitae.jpg",
+    alt: "Vitae physiotherapy clinic website hero",
+    description:
+      "A calm, trustworthy service website for a Barcelona physiotherapy and sports rehab clinic, with bilingual content and easy appointment booking.",
+    tags: ["Healthcare", "Web Design", "Bilingual"],
+    link: "https://vitae-fisioterpia-website.vercel.app/",
+  },
+  {
+    title: "Sira",
+    subtitle: "Cocktail Lounge",
+    year: "2026",
+    image: "/images/project-sira.jpg",
+    alt: "Sira cocktail bar website with large serif title",
+    description:
+      "A cinematic landing page for a hidden cocktail lounge in El Born — oversized typography and warm low-light imagery.",
+    tags: ["Landing Page", "Hospitality", "UI Design"],
+    link: "https://premium-sira-bar-landing-page.vercel.app/",
+  },
+  {
+    title: "Viñals Gourmet",
+    subtitle: "Food Company Website",
+    year: "2026",
+    image: "/images/project-vinals.jpg",
+    alt: "Viñals Gourmet corporate website with plated dish",
+    description:
+      "A clean, editorial corporate website for a gastronomy and catering company, focused on clarity and a premium brand feel.",
+    tags: ["Corporate", "Web Design", "React"],
+    link: "https://vi-als-gourmet.vercel.app/",
+  },
+  {
+    title: "Luxe Haven",
+    subtitle: "Hair Salon & Spa",
+    year: "2025",
+    image: "/images/project-salon.jpg",
+    alt: "Luxe Haven salon website",
+    description:
+      "A modern website for a Beverly Hills hair salon and spa, with services, pricing and a simple booking flow.",
     tags: ["Web App", "React", "TypeScript"],
     link: "https://salon-code-xg6g.vercel.app/",
   },
   {
     title: "Ledgerly",
     subtitle: "Fintech Dashboard",
-    year: "2024",
+    year: "2025",
     image: "/images/project-ledger.jpg",
     alt: "Ledgerly finance dashboard interface in a browser window",
     description:
@@ -37,13 +103,24 @@ const projects = [
     link: "https://leg-flax.vercel.app/",
   },
   {
+    title: "Serene",
+    subtitle: "Meditation & Sleep App",
+    year: "2025",
+    image: "/images/project-serene.jpg",
+    alt: "Serene meditation app interface on two floating phones",
+    description:
+      "A calm-first mobile experience — guided breathing, sleep stories and gentle habit tracking wrapped in a muted sage palette.",
+    tags: ["Mobile App", "UI/UX", "Design System"],
+    link: "https://serena-nine-sooty.vercel.app/",
+  },
+  {
     title: "Bloom & Bark",
     subtitle: "Brand & Booking Site",
-    year: "2023",
+    year: "2025",
     image: "/images/project-bloom.jpg",
     alt: "Bloom and Bark florist website with editorial typography",
     description:
-      "An editorial website for a neighbourhood florist — soft serif typography meets seamless booking, lifting reservations by 60%.",
+      "An editorial website for a neighbourhood florist — soft serif typography meets a simple, seamless booking flow.",
     tags: ["Branding", "Web Design", "React"],
     link: "https://bloom-bark.vercel.app/",
   },
@@ -113,7 +190,7 @@ export default function Projects() {
                     </p>
                   </div>
                   <span className="mt-1.5 text-sm font-semibold tabular-nums text-ink-soft/50">
-                    /0{i + 1}
+                    /{String(i + 1).padStart(2, "0")}
                   </span>
                 </div>
 
