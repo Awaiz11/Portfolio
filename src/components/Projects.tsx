@@ -158,12 +158,13 @@ export default function Projects() {
         <div className="mt-10 grid gap-x-8 gap-y-12 sm:grid-cols-2 md:mt-14 md:gap-y-16">
           {projects.map((project, i) => (
             <Reveal key={project.title} delay={(i % 2) * 120}>
-              <article className="group">
+              <article className="group transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1.5">
+                <Reveal variant="clip" delay={(i % 2) * 120 + 80}>
                 <a
                   href={project.link || "#contact"}
                   target={project.link ? "_blank" : undefined}
                   rel={project.link ? "noopener noreferrer" : undefined}
-                  className="relative block overflow-hidden rounded-[1.5rem] border border-line bg-parchment md:rounded-[2rem]"
+                  className="relative block overflow-hidden rounded-[1.5rem] border border-line bg-parchment shadow-[0_1px_0_rgba(0,0,0,0.02)] transition-shadow duration-500 group-hover:shadow-[0_30px_60px_-30px_rgba(33,30,25,0.35)] md:rounded-[2rem]"
                   aria-label={`${project.title} — ${project.subtitle}`}
                 >
                   <img
@@ -179,6 +180,7 @@ export default function Projects() {
                     {project.year}
                   </span>
                 </a>
+                </Reveal>
 
                 <div className="mt-6 flex items-start justify-between gap-4">
                   <div>

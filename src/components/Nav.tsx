@@ -33,7 +33,7 @@ export default function Nav() {
           className="text-lg font-extrabold tracking-tight text-ink"
           aria-label="Aawaiz Ijaz — home"
         >
-          Aawaiz<span className="text-terracotta">.</span>
+          Aawaiz
         </a>
 
         {/* Desktop links */}

@@ -1,5 +1,6 @@
 import { ArrowDown, Asterisk } from "lucide-react";
-import Reveal from "./Reveal";
+import { useEffect, useState } from "react";
+import Reveal, { useInView } from "./Reveal";
 import WhatsAppIcon from "./WhatsAppIcon";
 
 const WHATSAPP_URL = "https://wa.me/03354679492";
@@ -21,11 +22,19 @@ export default function Hero() {
 
             <Reveal delay={100}>
               <h1 className="mt-5 text-[clamp(2rem,7vw,4.9rem)] font-bold leading-[1.08] tracking-[-0.03em] text-ink md:mt-7 md:leading-[1.04]">
-                I design &amp; build digital products that feel{" "}
-                <em className="font-serif font-medium italic tracking-[-0.01em] text-terracotta">
-                  effortlessly
-                </em>{" "}
-                human.
+                {["I", "design", "&", "build", "digital", "products", "that", "feel"].map((w, i) => (
+                  <span key={i}><span className="word-mask">
+                    <span className="word" style={{ animationDelay: `${150 + i * 70}ms` }}>{w}</span>
+                  </span>{" "}</span>
+                ))}
+                <span className="word-mask">
+                  <em className="word font-serif font-medium italic tracking-[-0.01em] text-terracotta" style={{ animationDelay: "720ms" }}>
+                    effortlessly
+                  </em>
+                </span>{" "}
+                <span className="word-mask">
+                  <span className="word" style={{ animationDelay: "800ms" }}>human.</span>
+                </span>
               </h1>
             </Reveal>
 
@@ -229,7 +238,7 @@ export default function Hero() {
               >
                 <dt className="order-2 mt-2 text-sm text-ink-soft">{stat.label}</dt>
                 <dd className="order-1 text-3xl font-bold tracking-tight text-ink tabular-nums md:text-4xl">
-                  {stat.value}
+                  <CountUp value={stat.value} />
                 </dd>
               </div>
             ))}
@@ -237,5 +246,37 @@ export default function Hero() {
         </Reveal>
       </div>
     </section>
+  );
+}
+
+/** Counts a stat like "11+" or "100%" up from zero when it scrolls into view. */
+function CountUp({ value }: { value: string }) {
+  const match = value.match(/^(\d+)(.*)$/);
+  const target = match ? parseInt(match[1], 10) : 0;
+  const suffix = match ? match[2] : "";
+  const pad = match ? match[1].length : 0;
+  const [ref, visible] = useInView<HTMLSpanElement>(0.4);
+  const [n, setN] = useState(0);
+
+  useEffect(() => {
+    if (!visible || !match) return;
+    const start = performance.now();
+    const dur = 1400;
+    let raf = 0;
+    const tick = (t: number) => {
+      const p = Math.min(1, (t - start) / dur);
+      setN(Math.round(target * (1 - Math.pow(1 - p, 3))));
+      if (p < 1) raf = requestAnimationFrame(tick);
+    };
+    raf = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(raf);
+  }, [visible]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  if (!match) return <span>{value}</span>;
+  return (
+    <span ref={ref}>
+      {String(n).padStart(pad, "0")}
+      {suffix}
+    </span>
   );
 }
