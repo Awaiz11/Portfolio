@@ -4,6 +4,17 @@ import SectionLabel from "./SectionLabel";
 
 const projects = [
   {
+    title: "Phulkari",
+    subtitle: "Punjabi Restaurant, Lahore",
+    year: "2026",
+    image: "/images/project-phulkari.jpg",
+    alt: "Phulkari restaurant website with a stitched diamond frame around a dish",
+    description:
+      "A concept site for a Punjabi restaurant in DHA — colours from phulkari embroidery, a frame that stitches itself in, karahi prices by half or full kg and family dawat platters ordered on WhatsApp.",
+    tags: ["Next.js", "UI Design", "Animation"],
+    link: "https://phulkari-restaurant.vercel.app/",
+  },
+  {
     title: "Jharoka",
     subtitle: "Specialty Café, Lahore",
     year: "2026",
