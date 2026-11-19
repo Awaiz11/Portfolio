@@ -5,7 +5,7 @@ import WhatsAppIcon from "./WhatsAppIcon";
 const WHATSAPP_URL = "https://wa.me/03354679492";
 
 const stats = [
-  { value: "01+", label: "Years of experience" },
+  { value: "02+", label: "Years of experience" },
   { value: "11+", label: "Live websites built" },
   { value: "02", label: "Years of MERN training" },
   { value: "100%", label: "Mobile-responsive builds" },
