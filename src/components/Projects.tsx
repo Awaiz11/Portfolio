@@ -4,6 +4,17 @@ import SectionLabel from "./SectionLabel";
 
 const projects = [
   {
+    title: "Jharoka",
+    subtitle: "Specialty Café, Lahore",
+    year: "2026",
+    image: "/images/project-jharoka.jpg",
+    alt: "Jharoka café website with an arched window and Urdu title",
+    description:
+      "A concept site for a café on M.M. Alam Road — colours from Lahore's Kashi tiles, a jaali window that opens on load, a tabbed menu in rupees and table bookings sent to WhatsApp.",
+    tags: ["Next.js", "UI Design", "Animation"],
+    link: "https://jharoka-cafe.vercel.app/",
+  },
+  {
     title: "NexaFlow",
     subtitle: "Web Design Studio Website",
     year: "2026",
