@@ -6,9 +6,9 @@ const WHATSAPP_URL = "https://wa.me/03354679492";
 
 const stats = [
   { value: "01+", label: "Years of experience" },
-  { value: "25+", label: "Projects delivered" },
-  { value: "12+", label: "Happy clients" },
-  { value: "100%", label: "Satisfaction rate" },
+  { value: "11+", label: "Live websites built" },
+  { value: "02", label: "Years of MERN training" },
+  { value: "100%", label: "Mobile-responsive builds" },
 ];
 
 export default function Hero() {
