@@ -4,6 +4,17 @@ import SectionLabel from "./SectionLabel";
 
 const projects = [
   {
+    title: "Harkat",
+    subtitle: "Physiotherapy Clinic, Lahore",
+    year: "2026",
+    image: "/images/project-harkat.jpg",
+    alt: "Harkat physiotherapy website with a range-of-motion dial over a treatment photo",
+    description:
+      "A concept site for a physio clinic in Johar Town — a range-of-motion dial that animates in, conditions explained in plain words, home visits, a female physio option and bookings on WhatsApp.",
+    tags: ["Next.js", "UI Design", "Healthcare"],
+    link: "https://harkat-physio.vercel.app/",
+  },
+  {
     title: "Phulkari",
     subtitle: "Punjabi Restaurant, Lahore",
     year: "2026",
