@@ -4,6 +4,17 @@ import SectionLabel from "./SectionLabel";
 
 const projects = [
   {
+    title: "Singhaar",
+    subtitle: "Beauty Salon, Lahore",
+    year: "2026",
+    image: "/images/project-singhaar.jpg",
+    alt: "Singhaar salon website with a mehndi mandala drawn around a bridal photo",
+    description:
+      "A concept site for a women-only salon in Model Town — a mehndi mandala that draws itself in the hero, a tabbed price menu, bridal packages compared side by side, and booking by time or wedding date on WhatsApp.",
+    tags: ["Next.js", "UI Design", "Beauty"],
+    link: "https://singhaar-salon.vercel.app/",
+  },
+  {
     title: "Hajjam",
     subtitle: "Barbershop, Lahore",
     year: "2026",
