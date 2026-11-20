@@ -4,6 +4,17 @@ import SectionLabel from "./SectionLabel";
 
 const projects = [
   {
+    title: "Hajjam",
+    subtitle: "Barbershop, Lahore",
+    year: "2026",
+    image: "/images/project-hajjam.jpg",
+    alt: "Hajjam barbershop website with a turning barber pole beside a haircut photo",
+    description:
+      "A concept site for a barbershop in DHA Phase 6 — a barber pole that turns in the hero, a price board with time for every service, slot booking by barber and day sent to WhatsApp, and a dulha package for wedding days.",
+    tags: ["Next.js", "UI Design", "Booking"],
+    link: "https://hajjam-barbers.vercel.app/",
+  },
+  {
     title: "Harkat",
     subtitle: "Physiotherapy Clinic, Lahore",
     year: "2026",
